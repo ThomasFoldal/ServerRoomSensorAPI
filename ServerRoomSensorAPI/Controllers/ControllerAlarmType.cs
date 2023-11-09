@@ -33,7 +33,7 @@ namespace ServerRoomSensorAPI.Controllers
             };
             await _context.AlarmType.AddAsync(alarmType);
             await _context.SaveChangesAsync();
-            return Ok(_context.AlarmType.FirstAsync(at => at.alarmType == inbound));
+            return Ok(alarmType);
         }
         [HttpPut("Update")]
         public async Task<ActionResult<AlarmType>> Update(int id, string inbound)
@@ -45,7 +45,7 @@ namespace ServerRoomSensorAPI.Controllers
                 await _context.SaveChangesAsync();
                 return Ok(_context.AlarmType.FindAsync(id));
             }
-            return Ok(_context.AlarmType.FindAsync(id));
+            return BadRequest();
         }
 
     }
