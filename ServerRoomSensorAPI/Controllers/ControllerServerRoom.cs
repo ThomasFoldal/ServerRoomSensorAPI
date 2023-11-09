@@ -7,10 +7,10 @@ namespace ServerRoomSensorAPI.Controllers
 {
     [ApiController]
     [Route("ServerRoom")]
-    public class ServerRoomController : Controller
+    public class ControllerServerRoom : Controller
     {
         private readonly Datacontext _context;
-        public ServerRoomController(Datacontext datacontext)
+        public ControllerServerRoom(Datacontext datacontext)
         {
             _context = datacontext;
         }

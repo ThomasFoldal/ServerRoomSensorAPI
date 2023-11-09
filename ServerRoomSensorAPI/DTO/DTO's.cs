@@ -5,6 +5,8 @@
     public record struct SensorDTO(int RoomID, string Designation);
     public record struct ServerRoomDTO(string location, string region);
     public record struct HumidityDTO(int SensorID, decimal Humidity, DateTime Time);
+    public record struct SettingsDTO(string Setting, decimal Variable);
+    public record struct AlarmDTO(int AlarmTypeID, int SensorID, DateTime time);
     //public class TemperatureDTO
     //{
     //    public int ID { get; set; }

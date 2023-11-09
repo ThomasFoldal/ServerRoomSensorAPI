@@ -60,6 +60,7 @@ namespace ServerRoomSensorAPI.Controllers
             if (temp != null)
             {
                 _context.Temperature.Remove(temp);
+                await _context.SaveChangesAsync();
                 return Ok(await _context.Temperature.ToListAsync());
             }
             return BadRequest();
